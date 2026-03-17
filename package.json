@@ -1,0 +1,15 @@
+{
+  "name": "rustwipes",
+  "version": "1.0.0",
+  "main": "wipesToday.js",
+  "description": "Rust wipe tracker Discord bot",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.25.1"
+  }
+}
