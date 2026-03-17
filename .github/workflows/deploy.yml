@@ -17,4 +17,3 @@ jobs:
             git pull origin main
             npm install
             pm2 reload rust-wipes-discord-bot
-```
