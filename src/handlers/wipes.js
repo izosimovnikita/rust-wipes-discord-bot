@@ -13,9 +13,9 @@ const PER_PAGE = 5;
 
 const NUMBER_EMOJIS = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟'];
 const WIPE_TYPE_STYLE = {
-    'FORCE WIPE':      { emoji: '1', color: '#FF6B35' },
-    'FULL WIPE (BPs)': { emoji: '2', color: '#FFD700' },
-    'Map Wipe':        { emoji: '3', color: '#4287f5' },
+    'FORCE WIPE':      { emoji: '🔴', color: '#FF6B35' },
+    'FULL WIPE (BPs)': { emoji: '🟡', color: '#FFD700' },
+    'Map Wipe':        { emoji: '🔵', color: '#4287f5' },
 };
 
 function getNumberDisplay(n) {
