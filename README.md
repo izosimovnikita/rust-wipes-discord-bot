@@ -1,3 +1,4 @@
+_In Development_
 # Rust Wipe Tracker — Discord Bot
 
 A Discord bot that fetches and displays upcoming and recent **Rust server wipe schedules** using the BattleMetrics API. Users can search for servers by name, filter by day of the week, find recently wiped servers, or set a minimum player count — all from a single `/wipes` slash command with paginated, sortable results and an interactive server detail lookup.
