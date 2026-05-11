@@ -1,5 +1,7 @@
-const TOKEN = 'MTQ4MTY4MjM1NTk3MzM5MDQ0Nw.GWVc-k.rQ9F2XGeuhwIOtoJiQzcbfLmXeMzOoCdCPlgcQ';
-const CLIENT_ID = '1481682355973390447';
+require('dotenv').config();
+
+const TOKEN = process.env.TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
 
 const CONFIG = {
     GAME: 'rust',
