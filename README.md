@@ -84,11 +84,11 @@ Results expire after **2 minutes** of inactivity, after which all controls are a
 The bot applies the following filters to all results from BattleMetrics:
 
 - **Game:** Rust only
-- **Rank:** Top 500 globally (BattleMetrics rank ≤ 500)
+- **Rank:** Top 600 globally (BattleMetrics rank ≤ 600)
 - **Distance:** Maximum 2000 km from the API reference point
 - **PvE mode:** Excluded
 - **Gather rate:** Vanilla and up to 2x only
-- **Countries excluded:** UA, CN, JP, US, DE, PL, AU, SG
+- **Countries excluded:** UA, CN, JP, US, PL, AU, SG
 - **Blacklisted keywords in server name:** `creative`, `build`, `aim`, `ukn`, `training`, `test`, `sandbox`, `bedwars`, `tarkov`, `battleground`, `arena`, `pve`, `funserver`, `combattag`, `escape`, `minigame`, `lobby`, `tutorial`
 
 ---
