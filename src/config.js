@@ -8,13 +8,13 @@ const CONFIG = {
     GAME: 'rust',
     PAGE_SIZE: 50,
     MIN_PLAYERS: 0,
-    MAX_RANK: 500,
+    MAX_RANK: 600,
     FEATURES: {
         PVE_MODE: '689d22c2-66f4-11ea-8764-e7fb71d2bf20',
         RATE_LIMIT: 'ce84a17f-a52b-11ee-a465-33d2d6d4f5ea',
         LAST_WIPE_DATE: 'ce84a180-a52b-11ee-a465-1bdbafc9d0da',
     },
-    EXCLUDED_COUNTRIES: ['UA', 'CN', 'JP', 'US', 'DE', 'PL', 'AU', 'SG'],
+    EXCLUDED_COUNTRIES: ['UA', 'CN', 'JP', 'US', 'PL', 'AU', 'SG'],
     BLACKLIST_KEYWORDS: [
         'creative', 'build', 'aim', 'ukn', 'training', 'test', 'sandbox',
         'bedwars', 'tarkov', 'battleground', 'arena', 'pve', 'funserver',
