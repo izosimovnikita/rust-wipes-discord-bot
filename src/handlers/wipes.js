@@ -195,7 +195,12 @@ async function handleAutocomplete(interaction) {
  * fetches servers, sends the first page, and manages pagination/sort/detail collectors.
  */
 async function handleWipesCommand(interaction) {
-    await interaction.deferReply();
+    if (interaction.deferred || interaction.replied) return;
+    try {
+        await interaction.deferReply();
+    } catch {
+        return;
+    }
 
     const playersVal = interaction.options.getInteger('players');
     const minPlayers = playersVal !== null ? playersVal : CONFIG.MIN_PLAYERS;
