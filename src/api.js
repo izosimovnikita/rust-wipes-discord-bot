@@ -9,6 +9,14 @@ const {
 } = require('./helpers');
 const cache = require('./cache');
 
+const FETCH_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Referer': 'https://www.battlemetrics.com/',
+    'Origin': 'https://www.battlemetrics.com',
+};
+
 /**
  * Builds the URLSearchParams for the BattleMetrics API request based on filter type.
  */
@@ -64,8 +72,8 @@ async function fetchServerPages(initialUrl) {
 
     for (let page = 0; page < 5; page++) {
         console.log(`📡 Fetching page ${page + 1}: ${nextUrl}`);
-
-        const res = await fetch(nextUrl);
+        
+        const res = await fetch(nextUrl, { headers: FETCH_HEADERS });
         if (!res.ok) {
             const text = await res.text();
             console.error(`❌ API error on page ${page + 1}: ${res.status}. ${text}`);
@@ -157,7 +165,7 @@ function sortServers(servers, filterType) {
 async function fetchWithRetry(url, maxRetries = 3) {
     let delay = 1000;
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
-        const res = await fetch(url);
+        const res = await fetch(url, { headers: FETCH_HEADERS });
         if (res.status === 429) {
             const retryAfter = res.headers.get('Retry-After');
             const waitMs = retryAfter ? parseFloat(retryAfter) * 1000 : delay;
